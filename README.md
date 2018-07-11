@@ -7,19 +7,19 @@ Learning Typescript by making a Blockchain with it
 - command : yarn add tsc-watch --dev
 - package.json => 
 ```ts
-"scripts": {
-    "start": "tsc-watch --onSuccess \" node dist /index.js \" "
-}
+    "scripts": {
+        "start": "tsc-watch --onSuccess \" node dist /index.js \" "
+    }
 ```
 - tsconfig.json =>
 ```ts
-"include": ["src/**/*"]
-// 모든 파일을 src안에 compile하겠다.
-"compileOptions": {
-    ...
-    ...
-    "outDir": "dist"
-}
+    "include": ["src/**/*"]
+    // 모든 파일을 src안에 compile하겠다.
+    "compileOptions": {
+        ...
+        ...
+        "outDir": "dist"
+    }
 ```
 
 ### 4.01 함수안에 매개변수가 어떤 타입인지 알게 하기!
