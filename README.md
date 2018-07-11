@@ -1,6 +1,28 @@
 # Typechain
     
 Learning Typescript by making a Blockchain with it
+## 4 Types in Typescript
+### 4.01 함수안에 매개변수가 어떤 타입인지 알게 하기!
+```ts
+    const greet = (name:stinrg, age:number, gender:string): void => {
+    // void => [ts] Type 'string' is not assignable to type 'void'
+        console.log(`Hello ${name}, You are ${age}, You are a ${gender}`);
+    };
+    greet("이석환", "22", "soldier");
+    // "22" => [ts] Argument of type '"22"' is not assignable to parameter fo type 'number'
+    export {};
+```
+
+```ts
+    const greet = (name:string, age:number, gender:string): string => {
+        return `Hello ${name}, You are ${age}, You are a ${gender}`
+    };
+    console.log(greet("이석환", 22, "soldier"));
+
+    export {};
+```
+
+
 
 ## 3. First steops with Typescript
 ### Typescript의 마법은 Typed 언어 이다. 
