@@ -9,7 +9,7 @@ Learning Typescript by making a Blockchain with it
     const greet = (name, age, gender?) => {
         console.log(`Hello ${name}, You are ${age}, You are a ${gender}`);
     }
-    greet(name, age, gender);
+    greet(name, age);
     export{};
 ```
 Hello 이석환, You are 22, You are a undefined
