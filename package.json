@@ -6,5 +6,8 @@
   "repository": "https://github.com/seokany/typechain.git",
   "author": "seokany <:seokhwan.h.yi@gmail.com>",
   "license": "MIT",
-  "private": false
+  "scripts": {
+    "start": "node index.js",
+    "prestart": "tsc"
+  }
 }
