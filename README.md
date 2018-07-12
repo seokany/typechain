@@ -2,7 +2,39 @@
     
 Learning Typescript by making a Blockchain with it
 
-# 6 Classes on Typescript part One
+## 7 Blockchain Creating a Block
+
+- src/index.ts =>
+```ts
+    class Block {
+        public index : number;
+        public hash : string;
+        public previousHash : string;
+        public data : string;
+        public timestamp : number;
+        constructor (
+            index : number,
+            hash : string,
+            previousHash : string,
+            data : string,
+            timestamp : string
+        ){
+            this.index = index;
+            this.hash = hash;
+            this.previousHash = previousHash;
+            this.data = data;
+            this.timestamp = timestamp;
+        }
+    }
+    const genesisBlock: Block = new Block(0, "202020202020", "", "Hello", 123456);
+    let blockchain: [Block] = [genesisBlock];
+
+    console.log(blockchain);
+
+    export {};
+```
+
+## 6 Classes on Typescript part One
 ## Class 를 이용하여 Interface와의 다른점을 찾아보자.
 - src/index.ts =>\
 ```ts
