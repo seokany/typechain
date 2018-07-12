@@ -2,6 +2,28 @@
     
 Learning Typescript by making a Blockchain with it
 
+# 6 Classes on Typescript part One
+## Class 를 이용하여 Interface와의 다른점을 찾아보자.
+- src/index.ts =>\
+```ts
+    class Human {
+        public name: string;
+        private age: number;
+        public gender: string;
+        constructor(name: string, age: number, gender: string) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+    }
+
+    const hubert = new Human("Hubert", 22, "male" );
+
+    console.log(greet(hubert));
+```
+- dist/index.js 를 보면 interface는 JS에서 사용되지 않음을 알수 있다.
+- class는 코드를 컨트롤 할 수 있게 도와줌.
+
 ## 5 Interfaces on Typescript
 
 ### 5.02 Interface생성 및 Typescript 이해시키기!
