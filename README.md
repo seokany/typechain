@@ -4,6 +4,27 @@ Learning Typescript by making a Blockchain with it
 
 ## 5 Interfaces on Typescript
 
+### 5.02 Interface생성 및 Typescript 이해시키기!
+- src/index.ts =>
+```ts
+    interface Human {
+        name: string,
+        age: number,
+        gender: string
+    };
+    const person = {
+        name: "이석환",
+        age: 22,
+        gender: "male"
+    };
+    const greet = (person:Human) => {
+        return `Hello ${name}, You are ${age}, You are a ${gender}`
+    };
+    console.log(greet(person));
+
+    export {};
+```
+
 ### 5.01 object 넘기기 but, 실패!
 ####  실행 안됨. 하나의 argument가 아닌 세개의 argument를 예상하기 때문.
 ####  function에 object를 전달, 그리고 전달받은 object로 무언가 해야함.
