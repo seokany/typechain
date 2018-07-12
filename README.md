@@ -1,6 +1,23 @@
 # Typechain
     
 Learning Typescript by making a Blockchain with it
+
+## 5 Interfaces on Typescript
+
+### 5.01 object 넘기기 but, 실패!
+####  실행 안됨. 하나의 argument가 아닌 세개의 argument를 예상하기 때문.
+####  function에 object를 전달, 그리고 전달받은 object로 무언가 해야함.
+- src/index.ts => 
+```ts
+    const person = {name: "탈룰라", age: 42, gender:"female"};
+    const greet = (name:string, age:number, gender:string): string => {
+        retrun `Hello ${name}, You are ${age}, You are a ${gender}`
+    }
+    console.log(greet(person));
+
+    export {};
+```
+
 ## 4 Types in Typescript
 
 ### 4.02 yarn start의 반복을 tsc-watch를 통해 실시간으로 확인하기로 변환!
