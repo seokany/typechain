@@ -2,6 +2,30 @@
     
 Learning Typescript by making a Blockchain with it
 
+## 8 Creating a Block part Two
+
+- command => yarn add crypto-js
+- import : typescript는 import방식이 조금 다르다.
+```ts
+    import * as CryptoJS from "crypto-js";
+
+    class Block {
+    // static method : class Block 안에서 항상 사용 가능한 메서드
+    static calculateBlockchain = (
+        index : number,
+        previousHash : string,
+        timestamp : number,
+        data : string
+    ): string => CryptoJS.SHA256(index + previousHash + timestamp + data).toString();
+    
+    }
+
+    // 블록체인이 얼마나 긴지 알아야 함. 그래야 내 블록체인에 하나 더 추가 가능
+    const getBlockchain = () : Block[] => blockchain;
+    const latestBlockchain = () : Block => blockchain[blockchain.length -1];
+    const getNewTimeStamp = () : number => Math.round(new Date().getTime()  / 1000);
+```
+
 ## 7 Blockchain Creating a Block
 
 - src/index.ts =>
