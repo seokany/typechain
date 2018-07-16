@@ -42,7 +42,9 @@ const genesisBlock: Block = new Block(0, "2020202020", "", "Hello", 123456);
 let blockchain: [Block] = [genesisBlock];
 
 const getBlockchain = () : Block[] => blockchain;
+
 const getLatestBlockchain = () : Block => blockchain[blockchain.length -1];
+
 const getNewTimeStamp = () : number => Math.round(new Date().getTime() / 1000);
 
 const createNewBlock = (data: string): Block =>{
@@ -52,7 +54,9 @@ const createNewBlock = (data: string): Block =>{
     const newHash : string = Block.calculateBlockHash (
         newIndex, previousBlock.hash, newTimestamp, data
     );
+    
     const newBlock : Block = new Block(newIndex, newHash, previousBlock.hash, data, newTimestamp);
+    addBlock(newBlock);
     return newBlock;
 };
 const getHashforBlock = (aBlock : Block): string =>
@@ -82,5 +86,11 @@ const addBlock = (candidateBlock: Block) : void => {
         blockchain.push(candidateBlock);
     }
 }
+
+createNewBlock("second block");
+createNewBlock("third block");
+createNewBlock("fourth block")
+
+console.log(blockchain);
 
 export {};

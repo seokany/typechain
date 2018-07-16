@@ -2,6 +2,14 @@
     
 Learning Typescript by making a Blockchain with it
 
+## Conclusions
+### typescript를 사용하는 이유
+- 예측가능한 함수 리턴타입
+- 예측가능한 함수 인자(argument)타입
+- static
+- let blockchain: Block[] = [genesisBlock]; => block이 아닌것을 push 하지 않게 막을 수 있음.
+
+
 ## 10 Validating Block Structure
 ### make static validateStructure
 ### make const isBlockValid
