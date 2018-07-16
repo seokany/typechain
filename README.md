@@ -6,6 +6,7 @@ Learning Typescript by making a Blockchain with it
 ### make static validateStructure
 ### make const isBlockValid
 ### get Hash => const getHashforBlock
+### make const addBlock
 
 ## 9 Creating a Block part three
 ### 새로운 블록을 만들어보자
