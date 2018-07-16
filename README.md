@@ -2,6 +2,23 @@
     
 Learning Typescript by making a Blockchain with it
 
+## 9 Creating a Block part three
+### 새로운 블록을 만들어보자
+```ts
+    const createNewBlock = (data:string): Block => {
+        const previousBlock : Block = getLatestBlockchain();
+        const newIndex : number = perviousBlock.index + 1;
+        const newTimestamp : number = getNewTimeStamp();
+        const newHash : string = Block.calculateBlockHash (
+            newIndex, previousBlock.hash, newTimestamp, data
+        );
+        const newBlock : Block = new Block(newIndex, newHash, previousBlock.hash, data, newTimestamp);
+        return newBlock;
+    };
+
+    console.log(createNewBlock("Hello"), createNewBlock("Bye-Bye"));
+```
+
 ## 8 Creating a Block part Two
 
 - command => yarn add crypto-js
